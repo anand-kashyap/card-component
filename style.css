@@ -1,31 +1,39 @@
-body {
+* {
   box-sizing: border-box;
+}
+
+body {
   background: hsl(185, 75%, 39%);
-  background-image: url('./images/bg-pattern-bottom.svg'),
-    url('./images/bg-pattern-top.svg');
+  background-image: url('./images/bg-pattern-top.svg'),
+    url('./images/bg-pattern-bottom.svg');
   background-repeat: no-repeat;
-  background-position: right bottom, left top;
+  background-position: right 50vw bottom 35vh, left 50vw top 50vh;
   font-family: 'Kumbh Sans', sans-serif;
   font-size: 18px;
   padding: 0;
+  margin: 0;
 }
 
-.card {
-  background: white;
-  margin: auto;
-  width: 85%;
-  margin-top: 75px;
+main {
+  height: calc(100vh - 50px);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+footer {
+  height: 50px;
+}
 .card-header > img:first-child {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 .card {
+  background: white;
   border-radius: 20px;
   box-shadow: 2px 4px 12px 1px #565656;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .card-header {
@@ -37,7 +45,7 @@ body {
 .card-body {
   margin-top: 75px;
   margin-bottom: 10px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #c4c3c3;
 }
 
 .card-body > p {
@@ -95,16 +103,4 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-@media only screen and (min-width: 600px) {
-  .card {
-    width: 50%;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .card {
-    width: 30%;
-    margin-top: 100px;
-  }
 }
